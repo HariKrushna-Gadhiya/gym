@@ -1,0 +1,97 @@
+Create a premium, futuristic gym website with a dark neon cyberpunk theme.
+
+Brand Name: TITAN FITNESS
+
+Design Inspiration:
+- Neon-lit gym environments (blue + orange lighting)
+- Modern luxury fitness clubs
+- High-energy cardio rooms, strength zones, and calm yoga studios
+- Use cinematic lighting and strong contrast
+
+Style:
+- Dark UI (black background)
+- Neon accents (electric blue + orange)
+- Glassmorphism + glow effects
+- Premium, aggressive, motivational feel
+
+Typography:
+- Bold uppercase headings (Oswald style)
+- Clean modern body text (Inter style)
+
+Pages / Sections:
+
+1. HERO SECTION
+- Fullscreen background image/video (gym environment)
+- Overlay gradient (dark + neon glow)
+- Big headline: “FORGE YOUR LEGACY”
+- Subtext: premium gym description
+- CTA buttons: “Start Training” and “Explore Classes”
+- Add smooth animations (fade, parallax)
+
+2. NAVBAR
+- Transparent glass navbar
+- Sticky with scroll effect
+- Logo with accent color
+- Links: About, Classes, Pricing, Contact
+
+3. ABOUT SECTION
+- Split layout (text + image)
+- Include stats cards:
+  - 24/7 Access
+  - 50+ Classes
+  - 15K Sq Ft
+  - Elite Trainers
+- Add hover animation + glow borders
+
+4. PROGRAMS / CLASSES SECTION
+- 3 cards:
+  - Strength & Power
+  - Neon Spin (cycling)
+  - Recovery Yoga
+- Each card:
+  - Image background
+  - Glass overlay
+  - Hover zoom effect
+  - CTA “Learn More”
+
+5. PRICING SECTION
+- 3 plans:
+  - Basic
+  - Pro (highlighted)
+  - Elite
+- Cards with glow borders
+- Feature list with icons
+- CTA buttons
+
+6. ANIMATIONS & EFFECTS
+- Smooth scroll animations (Intersection Observer)
+- Hover effects on cards and buttons
+- Magnetic button effect
+- Custom cursor (dot + follower)
+- Loading screen animation
+
+7. 3D BACKGROUND
+- Use Three.js
+- Floating geometric shapes (metallic)
+- Neon lighting (blue + orange)
+- Particle effects
+- Parallax interaction with mouse
+
+8. FOOTER
+- Logo + tagline
+- Social icons
+- Contact details
+
+Technical Requirements:
+- Use HTML, CSS, JavaScript
+- Include Three.js for background
+- Fully responsive (mobile optimized)
+- Smooth performance
+
+Assets:
+- Use high-quality gym images (cycling, weights, yoga)
+- Apply neon lighting effects
+- Dark cinematic tone
+
+Goal:
+Create a visually stunning, high-end gym website that feels like a luxury fitness brand and is conversion-focused.
