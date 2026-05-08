@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TITAN FITNESS | Forge Your Legacy</title>
+    <meta name="description" content="Premium luxury gym with top-tier equipment, elite trainers, and an unbreakable community. Join Titan Fitness today.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Oswald:wght@500;700;800&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cinematic Loader -->
+    <div class="loader">
+        <div class="loader-logo">TITAN<span>FITNESS</span></div>
+        <div class="loader-progress">
+            <div class="loader-progress-bar" id="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-bar" id="scroll-progress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- 3D Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">TITAN<span>FITNESS</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#trainers">Trainers</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#pricing" class="btn btn-primary btn-small">Join Now</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#classes">Classes</a></li>
+            <li><a href="#trainers">Trainers</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <!-- Ambient Energy Lines -->
+        <div class="energy-line"></div>
+        <div class="energy-line"></div>
+        
+        <div class="hero-content">
+            <div class="hero-title-wrap">
+                <h1 class="fade-up">FORGE YOUR <span class="text-accent">LEGACY</span></h1>
+            </div>
+            <p class="fade-up" style="transition-delay: 0.2s;">Experience the ultimate training facility. Premium equipment, elite trainers, and an unbreakable community.</p>
+            <div class="hero-actions fade-up" style="transition-delay: 0.4s;">
+                <a href="#pricing" class="btn btn-primary">Start Training <i class="ph-bold ph-arrow-right"></i></a>
+                <a href="programs.html" class="btn btn-secondary">Explore Classes</a>
+            </div>
+            <div class="fade-up" style="transition-delay: 0.6s; margin-top: 1.5rem; color: var(--accent); font-weight: 600; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;">
+                <i class="ph-fill ph-warning-circle"></i> Only 5 Elite Spots Remaining
+            </div>
+        </div>
+        
+        <div class="scroll-indicator fade-up" style="transition-delay: 1s;">
+            <span>Scroll</span>
+            <div class="mouse"></div>
+        </div>
+    </header>
+
+    <!-- Ticker Tape -->
+    <section class="ticker" style="padding: 0;">
+        <div class="ticker-content">
+            <span>NO EXCUSES</span> • <span>PUSH HARDER</span> • <span>DEFY GRAVITY</span> • <span>ELEVATE YOUR MIND</span> • <span>BUILD STRENGTH</span> • 
+            <span>NO EXCUSES</span> • <span>PUSH HARDER</span> • <span>DEFY GRAVITY</span> • <span>ELEVATE YOUR MIND</span> • <span>BUILD STRENGTH</span> •
+            <span>NO EXCUSES</span> • <span>PUSH HARDER</span> • <span>DEFY GRAVITY</span> • <span>ELEVATE YOUR MIND</span> • <span>BUILD STRENGTH</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container about-grid">
+            <div class="about-text">
+                <div class="section-title" style="text-align: left; margin-bottom: 2rem;">
+                    <h2 class="fade-up">BEYOND A <span class="text-accent">GYM</span></h2>
+                </div>
+                <p class="fade-up" style="transition-delay: 0.1s;">Titan Fitness isn't just a place to sweat. It's a sanctuary for those who demand more from themselves. We provide an unparalleled environment designed to push you beyond your limits with state-of-the-art facilities and elite guidance.</p>
+                <div class="stats-grid">
+                    <div class="stat-item glass fade-up" style="transition-delay: 0.2s;">
+                        <div class="glass-content">
+                            <h3><span class="counter" data-target="24">0</span>/7</h3>
+                            <p>Access</p>
+                        </div>
+                    </div>
+                    <div class="stat-item glass fade-up" style="transition-delay: 0.3s;">
+                        <div class="glass-content">
+                            <h3><span class="counter" data-target="50">0</span>+</h3>
+                            <p>Weekly Classes</p>
+                        </div>
+                    </div>
+                    <div class="stat-item glass fade-up" style="transition-delay: 0.4s;">
+                        <div class="glass-content">
+                            <h3><span class="counter" data-target="15">0</span>K</h3>
+                            <p>Sq Ft Facility</p>
+                        </div>
+                    </div>
+                    <div class="stat-item glass fade-up" style="transition-delay: 0.5s;">
+                        <div class="glass-content">
+                            <h3>Elite</h3>
+                            <p>Coaches</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image-wrapper fade-up" style="transition-delay: 0.3s;">
+                <div class="about-neon-border"></div>
+                <div class="about-image" id="parallax-img-1">
+                    <img src="assets/class_strength.png" alt="Titan Fitness Facility">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [NEW] Athlete Transformations -->
+    <section id="transformations" class="transformations">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>PROVEN <span class="text-accent">RESULTS</span></h2>
+                <p>Real members. Real dedication. See what happens when you commit to the process.</p>
+            </div>
+            <div class="transform-grid">
+                <div class="transform-card glass fade-up">
+                    <div class="glass-content">
+                        <div class="transform-images">
+                            <div class="transform-img-box"><img src="assets/class_cardio.png" alt="Before"><span class="transform-label">Day 1</span></div>
+                            <div class="transform-img-box"><img src="assets/class_strength.png" alt="After"><span class="transform-label">Day 180</span></div>
+                        </div>
+                        <div class="transform-metrics">
+                            <div class="metric">
+                                <span class="counter text-accent" data-target="24">0</span>
+                                <p>Lbs Fat Lost</p>
+                            </div>
+                            <div class="metric">
+                                <span class="counter text-accent" data-target="12">0</span>
+                                <p>Lbs Muscle Gained</p>
+                            </div>
+                        </div>
+                        <p class="transform-story">"I came in completely out of shape. The community and the trainers pushed me to discover a version of myself I didn't know existed." - Alex M.</p>
+                    </div>
+                </div>
+
+                <div class="transform-card glass fade-up" style="transition-delay: 0.2s;">
+                    <div class="glass-content">
+                        <div class="transform-images">
+                            <div class="transform-img-box"><img src="assets/class_yoga.png" alt="Before"><span class="transform-label">Day 1</span></div>
+                            <div class="transform-img-box"><img src="assets/class_cardio.png" alt="After"><span class="transform-label">Day 365</span></div>
+                        </div>
+                        <div class="transform-metrics">
+                            <div class="metric">
+                                <span class="counter text-blue" data-target="35">0</span>
+                                <p>Lbs Fat Lost</p>
+                            </div>
+                            <div class="metric">
+                                <span class="counter text-blue" data-target="200">0</span>
+                                <p>% Endurance Boost</p>
+                            </div>
+                        </div>
+                        <p class="transform-story">"The Neon Spin classes became my therapy. Losing weight was just a byproduct of finally enjoying my workouts." - Sarah T.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section id="classes" class="classes">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>OUR <span class="text-accent">PROGRAMS</span></h2>
+                <p>Designed for all levels. Lead by industry experts. Find your discipline.</p>
+            </div>
+            
+            <div class="class-grid">
+                <div class="class-card glass fade-up">
+                    <img src="assets/class_strength.png" alt="Strength Training">
+                    <div class="class-card-content">
+                        <h3>Strength & Power</h3>
+                        <p>Build muscle and raw power with heavy lifting and optimized routines.</p>
+                        <a href="programs.html" class="class-link">Learn More <i class="ph-bold ph-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="class-card glass fade-up" style="transition-delay: 0.1s;">
+                    <img src="assets/class_cardio.png" alt="Cardio Spin">
+                    <div class="class-card-content">
+                        <h3>Neon Spin</h3>
+                        <p>High-energy cardio sessions under electric lights. Burn calories fast.</p>
+                        <a href="programs.html" class="class-link">Learn More <i class="ph-bold ph-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="class-card glass fade-up" style="transition-delay: 0.2s;">
+                    <img src="assets/class_yoga.png" alt="Yoga">
+                    <div class="class-card-content">
+                        <h3>Recovery Yoga</h3>
+                        <p>Restore your body and mind in our serene, ambiently lit studio.</p>
+                        <a href="programs.html" class="class-link">Learn More <i class="ph-bold ph-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [NEW] Community Section -->
+    <section class="community">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>UNBREAKABLE <span class="text-accent">CULTURE</span></h2>
+                <p>When you join Titan Fitness, you aren't just buying access to equipment. You are joining an army of individuals pushing each other to the absolute limit.</p>
+            </div>
+            <div class="community-grid">
+                <div class="community-col fade-up" id="parallax-col-1">
+                    <div class="community-img"><img src="assets/class_strength.png" alt="Community"></div>
+                    <div class="community-img"><img src="assets/class_yoga.png" alt="Community"></div>
+                </div>
+                <div class="community-col middle fade-up" style="transition-delay: 0.2s;" id="parallax-col-2">
+                    <div class="community-img" style="height: 500px;"><img src="assets/class_cardio.png" alt="Community" style="height: 100%; object-fit: cover;"></div>
+                </div>
+                <div class="community-col fade-up" style="transition-delay: 0.4s;" id="parallax-col-3">
+                    <div class="community-img"><img src="assets/class_yoga.png" alt="Community"></div>
+                    <div class="community-img"><img src="assets/class_strength.png" alt="Community"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section id="trainers" class="trainers">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>ELITE <span class="text-accent">COACHES</span></h2>
+                <p>Train with the best. Our coaches are industry veterans dedicated to your success.</p>
+            </div>
+
+            <div class="trainer-grid">
+                <div class="trainer-card glass fade-up">
+                    <div class="trainer-img">
+                        <img src="assets/class_strength.png" alt="Coach Marcus">
+                        <div class="trainer-socials">
+                            <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+                            <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Marcus Vance</h3>
+                        <p>Head of Strength</p>
+                    </div>
+                </div>
+
+                <div class="trainer-card glass fade-up" style="transition-delay: 0.1s;">
+                    <div class="trainer-img">
+                        <img src="assets/class_cardio.png" alt="Coach Elena">
+                        <div class="trainer-socials">
+                            <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+                            <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Elena Rostova</h3>
+                        <p>HIIT & Endurance</p>
+                    </div>
+                </div>
+
+                <div class="trainer-card glass fade-up" style="transition-delay: 0.2s;">
+                    <div class="trainer-img">
+                        <img src="assets/class_yoga.png" alt="Coach Jax">
+                        <div class="trainer-socials">
+                            <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+                            <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Jax Miller</h3>
+                        <p>Mobility & Recovery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [NEW] App Promotion Section -->
+    <section class="app-promo">
+        <div class="container app-grid">
+            <div class="app-text fade-up">
+                <h2>YOUR TRAINER IN <span class="text-blue">YOUR POCKET</span></h2>
+                <p>Take Titan Fitness wherever you go. Track your progress, book classes instantly, and access exclusive on-demand recovery routines.</p>
+                <ul class="app-features">
+                    <li><i class="ph-fill ph-chart-line-up"></i> Advanced Workout Analytics</li>
+                    <li><i class="ph-fill ph-calendar-check"></i> Seamless Class Booking</li>
+                    <li><i class="ph-fill ph-video"></i> On-Demand Library</li>
+                </ul>
+                <div style="margin-top: 2.5rem; display: flex; gap: 1rem;">
+                    <a href="#" class="btn btn-secondary"><i class="ph-fill ph-apple-logo"></i> App Store</a>
+                    <a href="#" class="btn btn-secondary"><i class="ph-fill ph-google-play-logo"></i> Google Play</a>
+                </div>
+            </div>
+            <div class="app-mockup fade-up" style="transition-delay: 0.3s;">
+                <div class="app-phone">
+                    <img src="assets/class_cardio.png" alt="App Screen">
+                </div>
+                <div class="app-card app-card-1 glass">
+                    <div class="glass-content">
+                        <h4 style="color: var(--accent); margin-bottom: 0.2rem;"><i class="ph-fill ph-fire"></i> 850</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">Calories Burned</p>
+                    </div>
+                </div>
+                <div class="app-card app-card-2 glass">
+                    <div class="glass-content">
+                        <h4 style="color: var(--accent-blue); margin-bottom: 0.2rem;"><i class="ph-fill ph-check-circle"></i> Class Booked</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">Neon Spin at 6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>MEMBERSHIP <span class="text-accent">PLANS</span></h2>
+                <p>Select the plan that fits your ambition. No hidden fees.</p>
+            </div>
+
+            <div class="pricing-controls fade-up">
+                <span class="active" id="monthly-label">Monthly</span>
+                <div class="toggle-switch" id="pricing-toggle">
+                    <div class="toggle-slider"></div>
+                </div>
+                <span id="yearly-label">Yearly (Save 20%)</span>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="price-card glass fade-up">
+                    <div class="glass-content" style="height: 100%; display: flex; flex-direction: column;">
+                        <h3>Basic</h3>
+                        <div class="price"><span class="currency">$</span><span class="amount" data-monthly="49" data-yearly="470">49</span> <span class="duration">/mo</span></div>
+                        <ul class="features">
+                            <li><i class="ph-fill ph-check-circle text-accent"></i> 24/7 Gym Access</li>
+                            <li><i class="ph-fill ph-check-circle text-accent"></i> Locker & Showers</li>
+                            <li class="disabled"><i class="ph-bold ph-x"></i> Group Classes</li>
+                            <li class="disabled"><i class="ph-bold ph-x"></i> Recovery Spa</li>
+                        </ul>
+                        <a href="#" class="btn btn-secondary w-100">Select Basic</a>
+                    </div>
+                </div>
+
+                <div class="price-card pro glass fade-up" style="transition-delay: 0.15s;">
+                    <div class="glass-content" style="height: 100%; display: flex; flex-direction: column;">
+                        <div class="badge">Most Popular</div>
+                        <h3>Titan Pro</h3>
+                        <div class="price"><span class="currency">$</span><span class="amount" data-monthly="89" data-yearly="850">89</span> <span class="duration">/mo</span></div>
+                        <ul class="features">
+                            <li><i class="ph-fill ph-check-circle text-accent"></i> 24/7 Gym Access</li>
+                            <li><i class="ph-fill ph-check-circle text-accent"></i> Locker & Showers</li>
+                            <li><i class="ph-fill ph-check-circle text-accent"></i> Unlimited Group Classes</li>
+                            <li><i class="ph-fill ph-check-circle text-accent"></i> 1 PT Session / Month</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary w-100">Select Pro</a>
+                    </div>
+                </div>
+
+                <div class="price-card glass fade-up" style="transition-delay: 0.3s;">
+                    <div class="glass-content" style="height: 100%; display: flex; flex-direction: column;">
+                        <h3>Elite</h3>
+                        <div class="price"><span class="currency">$</span><span class="amount" data-monthly="149" data-yearly="1430">149</span> <span class="duration">/mo</span></div>
+                        <ul class="features">
+                            <li><i class="ph-fill ph-check-circle text-accent"></i> All Pro Features</li>
+                            <li><i class="ph-fill ph-check-circle text-accent"></i> Unlimited PT Sessions</li>
+                            <li><i class="ph-fill ph-check-circle text-accent"></i> Recovery Spa Access</li>
+                            <li><i class="ph-fill ph-check-circle text-accent"></i> Nutrition Plan</li>
+                        </ul>
+                        <a href="#" class="btn btn-secondary w-100">Select Elite</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>FREQUENTLY ASKED <span class="text-accent">QUESTIONS</span></h2>
+            </div>
+            <div class="faq-container fade-up">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What are the gym hours?
+                        <i class="ph-bold ph-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We are open 24/7 for all members. Staffed hours are from 6 AM to 10 PM daily.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I freeze my membership?
+                        <i class="ph-bold ph-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can freeze your membership for up to 3 months per calendar year for medical or travel reasons. A small admin fee may apply.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Are classes included in the basic plan?
+                        <i class="ph-bold ph-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The Basic plan only covers gym floor access. Upgrading to Titan Pro gives you unlimited access to all group classes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content fade-up">
+            <h2>START YOUR <span class="text-accent">TRANSFORMATION</span> TODAY</h2>
+            <p>Join an elite community of individuals dedicated to pushing their limits. Claim a free 3-day trial.</p>
+            <a href="#pricing" class="btn btn-primary" style="font-size: 1.2rem; padding: 1.5rem 3rem;">BECOME A TITAN</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand fade-up">
+                    <a href="index.html" class="logo">TITAN<span>FITNESS</span></a>
+                    <p>Building better bodies since 2026. Join the movement.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+                        <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
+                        <a href="#"><i class="ph-fill ph-youtube-logo"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links fade-up" style="transition-delay: 0.1s;">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#classes">Programs</a></li>
+                        <li><a href="#trainers">Coaches</a></li>
+                        <li><a href="#pricing">Membership</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact fade-up" style="transition-delay: 0.2s;">
+                    <h4>Contact Us</h4>
+                    <p><i class="ph-fill ph-map-pin"></i> 123 Neon Drive, Cyber City, NY 10001</p>
+                    <p><i class="ph-fill ph-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="ph-fill ph-envelope"></i> info@titanfitness.com</p>
+                </div>
+                <div class="footer-newsletter fade-up" style="transition-delay: 0.3s;">
+                    <h4>Newsletter</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;">Subscribe for training tips, news, and exclusive offers.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">JOIN</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom fade-up">
+                <div class="copyright">
+                    &copy; 2026 Titan Fitness. All Rights Reserved. Designed with absolute power.
+                </div>
+                <div class="legal">
+                    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Three.js and custom 3D scene -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="scene3d.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
